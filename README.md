@@ -2,11 +2,26 @@
 
 ## GitHub Actions + SonarCloud
 
-[![Build and Tests](https://github.com/ugioni/playwright-e2e/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/playwright-e2e/actions/workflows/node.js.yml)
+[![Build and Tests](https://github.com/GabrielMacielZavarize/playwright-e2e/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/GabrielMacielZavarize/playwright-e2e/actions/workflows/node.js.yml)
 
 </br>
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_playwright-e2e&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_playwright-e2e)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=GabrielMacielZavarize_playwright-e2e&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=GabrielMacielZavarize_playwright-e2e)
+
+## Casos de teste - Covil do Mineiro
+
+Site testado: [atleticacovildomineiro.com.br](https://www.atleticacovildomineiro.com.br/)
+
+| # | Arquivo | Cenário |
+|---|---------|---------|
+| 1 | `src/scenarios/CovilHome.spec.ts` | Carrega a home (título, hero e seções) e navega pelo menu principal até a Loja |
+| 2 | `src/scenarios/CovilLoja.spec.ts` | Busca "caneca" na loja, valida o resultado filtrado e abre a página de detalhes do produto |
+| 3 | `src/scenarios/CovilLogin.spec.ts` | Tenta entrar com email/senha inválidos (gerados com Faker) e valida a mensagem de erro |
+
+Os seletores ficam em `src/support/elements/CovilElements.ts` e são ancorados no HTML
+(ids, `type`, `href`, `aria-label`); as ações e validações ficam em `src/support/pages/CovilPage.ts`.
+
+Para rodar só esses cenários: `npm run scenario`
 
 ## Getting Started
 
