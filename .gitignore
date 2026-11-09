@@ -4,4 +4,5 @@ dist/
 artifacts/
 zerostep.config.json
 .playwright-mcp/
-playwright-report/test-results/
+playwright-report/
+test-results/
